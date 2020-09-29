@@ -98,7 +98,9 @@ class PageController extends Controller
         $sortStatus = "";
         $orderBy = '';
         $sortVar = '';
-        if (isset($_POST['sortName']) or isset($_POST['sortEmail']) or isset($_POST['sortStatus']) or isset($_SESSION['sort-name']) or isset($_SESSION['sort-email']) or isset($_SESSION['sort-status'])) {
+        if (isset($_POST['sortName']) or isset($_POST['sortEmail']) or isset($_POST['sortStatus']) or
+            isset($_SESSION['sort-name']) or isset($_SESSION['sort-email']) or isset($_SESSION['sort-status'])) {
+            
             if (isset($_POST['sortName']) and $_POST['sortName'] != '') {
                 $_SESSION['sort-name'] = $_POST['sortName'];
                 $sortName = " name " . $_SESSION['sort-name'];
